@@ -10,6 +10,5 @@
   docker_container:
     name: countries-assmebly_container
     image: countries-assmebly:latest
-    network_mode: host
     ports:
       - "8080:80"
