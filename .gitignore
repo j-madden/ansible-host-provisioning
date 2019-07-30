@@ -1,0 +1,5 @@
+
+.vagrant/machines/backend/virtualbox/action_provision
+.vagrant/machines/backend/virtualbox/action_set_name
+.vagrant
+.DS_Store
