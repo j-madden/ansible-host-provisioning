@@ -1,0 +1,16 @@
+---
+- hosts: edge
+  become_user: root
+  become_method: sudo
+  become: yes
+  roles:
+    - common
+    - nginx
+    
+- hosts: backend
+  become_user: root
+  become_method: sudo
+  become: yes
+  roles:
+    - common
+    - countries-assmebly

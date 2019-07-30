@@ -1,0 +1,15 @@
+---
+- name: Build Docker image from Dockerfile for countries assembly
+  docker_image:
+    name: countries-assmebly:latest
+    build:
+      path: /vagrant/docker/countries-assmebly
+    state: present
+
+- name: Create a data container for countries assembly
+  docker_container:
+    name: countries-assmebly_container
+    image: countries-assmebly:latest
+    network_mode: host
+    ports:
+      - "8080:80"
